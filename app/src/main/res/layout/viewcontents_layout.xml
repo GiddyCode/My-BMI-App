@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:textSize="22sp"
+                android:text="Name"
+                android:textStyle="bold"
+                android:layout_weight="24"
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textName"/>
+            <TextView
+                android:text="BMI"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_weight="27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textBMI"/>
+            <TextView
+                android:textSize="22sp"
+                android:text="Weight"
+                android:textStyle="bold"
+                android:layout_weight="23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textWeight"/>
+            <TextView
+                android:text="Date"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_weight="26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textDate"
+                android:layout_marginRight="1dp"/>
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="488dp"
+            android:divider="#00000000"
+            android:id="@+id/listView"
+            android:dividerHeight="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.65" />
+    </LinearLayout>
+</RelativeLayout>

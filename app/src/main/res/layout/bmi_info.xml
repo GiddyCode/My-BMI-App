@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/relativeLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/resultHeading"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/bmiResult"
+        android:textSize="30sp"
+        android:layout_below="@+id/resultHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/bmiCategory"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/bmiResult"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:background="@drawable/bmibar"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/bmiCategory"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Underweight &lt;18.50 "
+        android:id="@+id/underweightText"
+        android:textSize="22sp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Normal 18.50 - 24.99"
+        android:id="@+id/normalText"
+        android:textSize="22sp"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/underweightText"
+        android:layout_alignStart="@+id/underweightText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overweight >=25.00"
+        android:id="@+id/overweightText"
+        android:layout_below="@+id/normalText"
+        android:textSize="22sp"
+        android:paddingTop="5dp"
+        android:layout_alignStart="@+id/normalText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obese >=30.00"
+        android:id="@+id/obeseText"
+        android:textSize="22sp"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/overweightText"
+        android:layout_alignStart="@+id/overweightText" />
+
+
+
+</RelativeLayout>

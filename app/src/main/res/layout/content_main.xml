@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="coding.guillermo.bmiapp.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:clickable="false"
+    android:background="#ffffff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textSize="25sp"
+        android:id="@+id/weightText"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/trackerButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="4"
+        android:id="@+id/weightInput"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/apptheme_textfield_activated_holo_light"
+        android:layout_alignBottom="@+id/weightText"
+        android:layout_toEndOf="@+id/weightText"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="lb"
+        android:textSize="20sp"
+        android:id="@+id/weightMeasure"
+        android:layout_alignBaseline="@+id/weightText"
+        android:layout_alignBottom="@+id/weightText"
+        android:layout_toEndOf="@+id/weightInput" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Standard"
+        android:id="@+id/standardButton"
+        android:backgroundTint="@color/toolBarColor"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/weightInput"
+        android:layout_alignEnd="@+id/calculateButton" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Metric"
+        android:id="@+id/metricButton"
+        android:backgroundTint="@color/toolBarColor"
+        android:textColor="#FFFFFFFF"
+        android:layout_above="@+id/weightInput"
+        android:layout_alignEnd="@+id/calculateButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:id="@+id/heightText"
+        android:textSize="25sp"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/weightText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="4"
+        android:id="@+id/feetInput"
+        android:background="@drawable/apptheme_textfield_activated_holo_light"
+        android:layout_alignBottom="@+id/heightText"
+        android:layout_alignStart="@+id/weightInput"
+        android:gravity="center_horizontal"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="4"
+        android:id="@+id/centInput"
+        android:background="@drawable/apptheme_textfield_activated_holo_light"
+        android:layout_alignBottom="@+id/heightText"
+        android:layout_alignStart="@+id/weightInput"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ft"
+        android:id="@+id/feetText"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/heightText"
+        android:layout_alignBottom="@+id/heightText"
+        android:layout_alignStart="@+id/weightMeasure" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="cm"
+        android:id="@+id/centText"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/heightText"
+        android:layout_alignBottom="@+id/heightText"
+        android:layout_toEndOf="@+id/centInput" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="3"
+        android:id="@+id/inchesInput"
+        android:background="@drawable/apptheme_textfield_activated_holo_light"
+        android:layout_alignTop="@+id/feetInput"
+        android:layout_toEndOf="@+id/feetText"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="in"
+        android:textSize="20sp"
+        android:id="@+id/inchesText"
+        android:layout_alignBottom="@+id/heightText"
+        android:layout_alignBaseline="@+id/heightText"
+        android:layout_toEndOf="@+id/inchesInput" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calculate BMI"
+        android:id="@+id/calculateButton"
+        android:backgroundTint="@color/toolBarColor"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="99dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI log"
+        android:id="@+id/trackerButton"
+        android:backgroundTint="@color/toolBarColor"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/calculateButton"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
