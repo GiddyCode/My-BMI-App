@@ -50,7 +50,7 @@ public class MainActivity2 extends AppCompatActivity {
         arrow.setImageResource(R.drawable.arrow);
         RelativeLayout rl = (RelativeLayout) findViewById(R.id.relativeLayout);
 
-       // displaying the arrow in the correct place depending on the user's screen specs
+       // Displaying the arrow in the correct place depending on the user's screen specs
         float d = getApplicationContext().getResources().getDisplayMetrics().density;
         int margin = (int) (166 * d);
         DisplayMetrics metrics = new DisplayMetrics();
@@ -65,7 +65,7 @@ public class MainActivity2 extends AppCompatActivity {
         // BMI category bold display
         bmiCategoryBold(result.getBMI());
 
-        // Saving result to internal storage for later retrieval
+        // Saving result to SQLite DB
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

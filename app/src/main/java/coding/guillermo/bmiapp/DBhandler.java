@@ -38,7 +38,7 @@ public class DBhandler extends SQLiteOpenHelper{
         db.execSQL("DROP_TABLE_IF_EXIST "+ TABLE_NAME);
         onCreate(db);
     }
-    // adding new BMI result to the database
+    // Adding new BMI result to the database
     public void addResult(Result result){
         ContentValues values = new ContentValues();
         values.put(USER_NAME,result.getName());
@@ -65,6 +65,7 @@ public class DBhandler extends SQLiteOpenHelper{
     public Cursor getListContents(){
         SQLiteDatabase db = getWritableDatabase();
         Cursor data = db.rawQuery("SELECT * FROM "+TABLE_NAME,null);
+        db.close();
         return data;
     }
 }
